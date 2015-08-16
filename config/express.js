@@ -18,7 +18,7 @@ module.exports = function(){
   app.use(session({
     secret: 'vala votar',
     resave: true,
-    saveUnitialized: true
+    saveUninitialized: true
   }));
 
 

@@ -1,6 +1,9 @@
 module.exports = function (app) {
-  app.route('/user')
-    .get(function (req,res) {
+  var controller = app.controllers.user;
 
-    });
+  app.route('/user')
+    .get(controller.getUser);
+
+  app.route('/user/:id')
+    .post(controller.addLocal);
 };
