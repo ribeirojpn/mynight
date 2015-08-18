@@ -22,6 +22,7 @@
     "express": "^4.13.3",
     "express-load": "^1.1.14",
     "express-session": "^1.11.3",
-    "method-override": "^2.3.5"
+    "method-override": "^2.3.5",
+    "yelp": "^0.2.0"
   }
 }

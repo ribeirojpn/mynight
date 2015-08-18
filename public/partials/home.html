@@ -8,7 +8,7 @@
 </header>
 <div class="content">
   <div class="container">
-    <div class="search-section" ng-hide="places[0].name">
+    <div class="search-section" ng-hide="places.businesses[0].name">
       <div class="title text-center">
         <h1>MyNight</h1>
       </div>
@@ -26,14 +26,34 @@
         </form>
       </div>
     </div>
-    <div class="list-section" ng-show="places[0].name">
-      <div class="title text-center">
-        <h1>MyNight</h1>
+    <div class="list-section" ng-show="places.businesses[0].name">
+      <div class="row">
+        <div class="title text-center col-md-4">
+          <h1>MyNight</h1>
+        </div>
+      <form class="col-md-8" style="padding-top: 48px;">
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </span>
+          <input type="text" class="form-control" placeholder="Where are you?" aria-describedby="sizing-addon1" ng-model="search.text">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="find()">Search</button>
+          </div>
+        </div>
+      </form>
       </div>
       <div class="row">
-        <div class="col-md-4 place-box" ng-repeat="place in places">
-          <h3 class="place-name text-center">{{place.name}}</h3>
-          <button class="btn btn-default">Eu vou!</button>
+        <div class="col-md-3" ng-repeat="place in places.businesses">
+          <div class="place-box">
+            <div class="place-name-box" style="background-image: url({{place.image_url}});">
+              <div class="name-box">
+                <a class="place-name text-center" ng-href="{{place.url}}">{{place.name}}</a>
+              </div>
+            </div>
+            <button class="btn btn-default" ng-hide="place.going" ng-click="setGo(place,true)">Eu vou!</button>
+            <button class="btn btn-success btn-going" ng-show="place.going" ng-click="setGo(place,false)">Estarei</button>
+          </div>
         </div>
       </div>
     </div>

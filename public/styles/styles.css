@@ -13,7 +13,7 @@ html, body {
   color: white;
 }
 
-.search-section .title h1 {
+.search-section .title {
   margin-top: 90px;
   margin-bottom: 90px;
 }
@@ -31,14 +31,42 @@ html, body {
   margin-top: 10px;
 }
 .place-box {
-  width: 370px;
-  padding: 10px;
-  background-color: rgba(47, 44, 66, 0.73);
+  width: 255px;
+  height: 234px;
+  background-color: rgba(255, 255, 255, 0.95);
   margin: 10px;
 }
 .place-box h3{
   margin-bottom: 30px;
 }
+.place-box button{
+  width: 255px;
+}
+
+
+
 h3{
-  color: white;
+  color: #153859;
+}
+
+.listed {
+  background-color: rgba(0, 0, 0, 0.76);
+}
+.place-name-box{
+  width: 255px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 255px 200px;
+}
+.place-name-box a{
+  color: rgba(255, 255, 255, 0.83);
+
+  font-size: 20px;
+}
+.name-box{
+  background-color: rgba(0, 0, 0, 0.75);
+
+}
+.btn-going:hover {
+  background-color: rgb(164, 30, 30);
 }
