@@ -1,8 +1,3 @@
-var user = {
-  "user" : "ribeirojpn",
-  "locals" : ["a","b"]
-};
-
 module.exports = function(){
   var controller = {};
 

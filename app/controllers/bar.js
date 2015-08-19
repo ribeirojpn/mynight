@@ -16,23 +16,20 @@ module.exports = function (app) {
        var bars= [];
        for (var i in data.businesses){
          var place = {};
-         var bar = data.businesses[i];
-         place.id = bar.id;
-         place.name = bar.name;
-         place.url = bar.url;
-         place.image_url = bar.image_url;
+         place.id = data.businesses[i].id;
+         place.name = data.businesses[i].name;
+         place.url = data.businesses[i].url;
+         place.image_url = data.businesses[i].image_url;
 
          Bar.findOrCreate(
-          {'yelpId':bar.id},
-          {'name': bar.name,
-          'url': bar.url,
-          'url_image': bar.image_url},
-          function (erro, bar) {
+          {'yelpId':place.id},
+          {'name': place.name,
+          'url': place.url,
+          'url_image': place.image_url},
+          function (erro, place) {
             if(erro){
               console.log(erro);
-              // return done(erro);
             }
-            // return done(null,bar);
           }
         );
         bars.push(place);
