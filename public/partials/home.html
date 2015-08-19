@@ -6,21 +6,32 @@
     </div>
   </div>
 </header>
-<div class="content">
+<div class="loading" ng-show="search.loading">
+  <div class="container text-center">
+    <i class="fa fa-spinner fa-pulse fa-5x" style="color:white"></i>
+  </div>
+</div>
+<div class="content" ng-hide="search.loading">
   <div class="container">
+    <div class="alert alert-danger" role="alert" ng-show="search.result">
+      <i class="fa fa-exclamation-circle"></i> {{search.result}}
+    </div>
+    <!-- <div class="alert-text" ng-show="search.result">
+      <p class="bg-danger">{{search.result}}</p>
+    </div> -->
     <div class="search-section" ng-hide="places[0].name">
       <div class="title text-center">
         <h1>MyNight</h1>
       </div>
       <div class="search-box">
-        <form>
+        <form name="form">
           <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </span>
-            <input type="text" class="form-control" placeholder="Where are you?" aria-describedby="sizing-addon1" ng-model="search.text">
+            <input type="text" name="place" class="form-control" placeholder="Where are you?" aria-describedby="sizing-addon1" ng-model="search.text" required="">
             <div class="input-group-btn">
-              <button type="button" class="btn btn-default" ng-click="find()">Search</button>
+              <button type="submit" class="btn btn-default" ng-click="find()">Search</button>
             </div>
           </div>
         </form>
@@ -36,9 +47,9 @@
           <span class="input-group-addon" id="sizing-addon1">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
           </span>
-          <input type="text" class="form-control" placeholder="Where are you?" aria-describedby="sizing-addon1" ng-model="search.text">
+          <input type="text" class="form-control" placeholder="Where are you?" aria-describedby="sizing-addon1" ng-model="search.text" required="">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="find()">Search</button>
+            <button type="submit" class="btn btn-default" ng-click="find()">Search</button>
           </div>
         </div>
       </form>

@@ -34,8 +34,11 @@ module.exports = function (app) {
         );
         bars.push(place);
       }
-      res.json(bars);
-      console.log("Enviado: " + bars[0].name);
+      if (error){
+        res.json([]);
+      } else {
+        res.json(bars);
+      }
     });
   };
 

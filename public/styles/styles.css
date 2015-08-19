@@ -70,3 +70,9 @@ h3{
 .btn-going:hover {
   background-color: rgb(164, 30, 30);
 }
+
+.bg-danger {
+  padding: 20px;
+  color: rgb(136, 0, 0);
+  
+}
