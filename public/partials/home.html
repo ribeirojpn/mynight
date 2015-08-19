@@ -8,7 +8,7 @@
 </header>
 <div class="content">
   <div class="container">
-    <div class="search-section" ng-hide="places.businesses[0].name">
+    <div class="search-section" ng-hide="places[0].name">
       <div class="title text-center">
         <h1>MyNight</h1>
       </div>
@@ -26,7 +26,7 @@
         </form>
       </div>
     </div>
-    <div class="list-section" ng-show="places.businesses[0].name">
+    <div class="list-section" ng-show="places[0].name">
       <div class="row">
         <div class="title text-center col-md-4">
           <h1>MyNight</h1>
@@ -44,7 +44,7 @@
       </form>
       </div>
       <div class="row">
-        <div class="col-md-3" ng-repeat="place in places.businesses">
+        <div class="col-md-3" ng-repeat="place in places">
           <div class="place-box">
             <div class="place-name-box" style="background-image: url({{place.image_url}});">
               <div class="name-box">
