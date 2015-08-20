@@ -1,15 +1,20 @@
-module.exports = function(){
+module.exports = function(app){
   var controller = {};
 
-  controller.getUser = function(req,res){
-    res.json(user);
-  };
+  var User = app.models.User;
 
-  controller.addLocal = function(req, res){
-    var id = req.params.id;
-    user.locals.push(id);
+  controller.addLocal = function(req,res){
+    if(req.user){
+      var id = req.body._id;
+      User.findByIdAndUpdate(id, req.body).exec().then(function(user){
+          res.json(user);
+        }, function (erro) {
+          console.error(erro);
+          res.status(500).json(erro);
+        }
+      );
+    }
   };
-
 
   return controller;
 }

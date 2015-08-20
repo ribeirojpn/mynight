@@ -1,49 +1,65 @@
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
-  background-image: url(./../images/8DKFMK9UNW.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./../images/8DKFMK9UNW.jpg);
   background-color: #153859;
-  background-repeat: no-repeat;
+  background-repeat: repeat,no-repeat;
   background-size: cover;
 }
-
-.navbar a{
-  color: white;
+.navbar {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0px;
 }
-.navbar a:hover{
-  color: white;
+.navbar a, .navbar a:hover{
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+.navbar-text {
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
+.user-photo {
+  width: 36px;
+}
 .search-section .title {
   margin-top: 90px;
   margin-bottom: 90px;
 }
-.title h1{
+.title h1,.title p{
   font-size: 80px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.90);
 }
+.title p{
+  font-size: 60px;
+}
 .search-box{
-  margin: auto;
+  margin: 0px auto 200px auto;
   width: 600px;
   opacity: 0.9;
 }
 .search-box .button-submit{
   margin-top: 10px;
 }
+
+.list-section form{
+  padding-top: 20px;
+}
+
 .place-box {
   width: 255px;
   height: 234px;
   background-color: rgba(255, 255, 255, 0.95);
   margin: 10px;
 }
+
 .place-box h3{
   margin-bottom: 30px;
 }
+
 .place-box button{
   width: 255px;
 }
-
-
 
 h3{
   color: #153859;
@@ -74,5 +90,8 @@ h3{
 .bg-danger {
   padding: 20px;
   color: rgb(136, 0, 0);
-  
+}
+
+footer,footer a, footer a:hover{
+  color: rgba(255, 255, 255, 0.8);
 }
