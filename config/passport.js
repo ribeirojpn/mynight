@@ -9,8 +9,8 @@ module.exports = function(){
   var User = mongoose.model('User');
 
   passport.use(new FacebookStrategy({
-    clientID: '497526977087283',
-    clientSecret: 'c059fa812eb49748c0f5683da6df17be',
+    clientID: '965941920110544',
+    clientSecret: 'e209e7218e0dee9e44a273803fbb7293',
     callbackURL: 'http://localhost:3000/auth/facebook/callback',
     // callbackURL: 'https://voted.herokuapp.com/auth/facebook/callback'||'http://localhost:3000/auth/facebook/callback',
     profileFields: ['id','displayName','photos','emails']
